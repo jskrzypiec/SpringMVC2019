@@ -1,0 +1,874 @@
+{
+	"info": {
+		"_postman_id": "31364a1a-4b7f-490d-86fc-abc02157d405",
+		"name": "slab10 - API tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1.1 glowa wstawienie",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "45f8c5b9-b1c8-4a88-a6bf-c5c6dfc6a08e",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"srednica\" : \"46.6\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/glowa/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"glowa",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.2.1 glowa getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/glowa/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"glowa",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.2.2 glowa getById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/glowa/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"glowa",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.3 glowa update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"srednica\" : 33.3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/glowa/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"glowa",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.4 glowa delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/glowa/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"glowa",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.1 pilka wstawianie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"marka\" : \"Adidas\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/pilka/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pilka",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.2.1 pilka getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/pilka/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pilka",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.2.2 pilka getById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/pilka/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pilka",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.3 piłka update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"marka\" : \"InnaMarka\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/pilka/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pilka",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.4 piłka delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/pilka/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pilka",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.1.1 trener wstawianie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"imie\": \"Adam\",\r\n    \"nazw\": \"Peczek\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/trener/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"trener",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.1.2 trener wstawianie (głowa po średnicy)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"imie\": \"Tomasz\",\r\n    \"nazw\": \"Zielarczyk\",\r\n    \"glowa\": {\r\n        \"srednica\": 34.7\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/trener/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"trener",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.1.3 trener wstawianie (głowa po id)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"imie\": \"Tomasz\",\r\n    \"nazw\": \"Bystry\",\r\n    \"glowa\": {\r\n        \"id\" : 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/trener/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"trener",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.1.4 trener wstawianie (piłki po marce)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imie\": \"Stefan\",\r\n    \"nazw\": \"Hula\",\r\n    \"glowa\": {\r\n        \"srednica\": 29.9\r\n    },\r\n    \"pilki\": [\r\n        {\r\n            \"marka\": \"Kipsta\"\r\n        },\r\n        {\r\n            \"marka\": \"Nike\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/trener/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"trener",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.1.5 trener wstawianie (piłki po id)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imie\": \"Stefan\",\r\n    \"nazw\": \"Hula\",\r\n    \"glowa\": {\r\n        \"srednica\": 29.9\r\n    },\r\n    \"pilki\": [\r\n        {\r\n            \"marka\" : \"Pilllllka\"\r\n        },\r\n        {\r\n            \"id\" : 4\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/trener/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"trener",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.2.1 trener getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/trener/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"trener",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.2.2 trener getById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/trener/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"trener",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.3.1 trener update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"imie\": \"Adam\",\r\n    \"nazw\": \"Adamek\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/trener/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"trener",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.3.2 trener update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"imie\": \"Bartosz\",\r\n    \"nazw\": \"Bartek\",\r\n    \"glowa\" : {\r\n    \t\"srednica\" : 25.5\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/trener/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"trener",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.3.3 trener update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imie\": \"Cyryl\",\r\n    \"nazw\": \"Cierniak\",\r\n    \"glowa\": {\r\n        \"srednica\": 48.1\r\n    },\r\n    \"pilki\": [\r\n        {\r\n            \"marka\": \"Cierniakowa\"\r\n        },\r\n        {\r\n            \"marka\": \"Cierniaka\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/trener/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"trener",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.4 trener delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/trener/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"trener",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.1.1 zawodnik wstawianie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"imie\" : \"Aneta\",\r\n    \"nazw\" : \"Popko\",\r\n    \"yob\" : 1988\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/zawodnik/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"zawodnik",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.1.2 zawodnik wstawianie (pilki po marce)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imie\" : \"Igor\",\r\n    \"nazw\" : \"Nowinka\",\r\n    \"yob\" : 1995,\r\n    \"pilki\" : [\r\n   \t\t{\r\n   \t\t\t\"marka\" : \"Pilkaczka\"\r\n   \t\t},\r\n   \t\t{\r\n   \t\t\t\"marka\" : \"Kulczak\"\r\n   \t\t}\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/zawodnik/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"zawodnik",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.1.3 zawodnik wstawianie (pilki po id)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imie\" : \"Igor\",\r\n    \"nazw\" : \"Nowinkowy\",\r\n    \"yob\" : 1995,\r\n    \"pilki\" : [\r\n   \t\t{\r\n   \t\t\t\"marka\" : \"TestowaPilka\"\r\n   \t\t},\r\n   \t\t{\r\n   \t\t\t\"id\" : 4\r\n   \t\t}\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/zawodnik/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"zawodnik",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.2 zawodnik getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/zawodnik/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"zawodnik",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.2.2 zawodnik getById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/zawodnik/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"zawodnik",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.3.1 zawodnik update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"imie\" : \"Daniel\",\r\n    \"nazw\" : \"Danielek\",\r\n    \"yob\" : 1976\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/zawodnik/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"zawodnik",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.3.2 zawodnik update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"imie\" : \"Eryk\",\r\n    \"nazw\" : \"Egoistyczny\",\r\n    \"yob\" : 1989,\r\n    \"pilki\" : [\r\n   \t\t{\r\n   \t\t\t\"marka\" : \"Erykowa\"\r\n   \t\t},\r\n   \t\t{\r\n   \t\t\t\"marka\" : \"Eryczysta\"\r\n   \t\t}\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/zawodnik/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"zawodnik",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.4 trener delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/zawodnik/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"zawodnik",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

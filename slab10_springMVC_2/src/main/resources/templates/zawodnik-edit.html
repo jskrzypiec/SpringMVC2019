@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Spring MVC App 2</title>
+</head>
+
+<body>
+<h1>App</h1>
+
+<form action="#" th:action="@{/zawodnik/edit}" th:object="${zawodnik}" method="post">
+  <input type="hidden" name="id" th:field="*{id}">
+  <!--  <input type="hidden" name="pilki" th:field="*{pilki}"> -->
+  <table>
+    <tr>
+      <td><label for="imie">Imie</label></td>
+      <td><input type="text" th:field="*{imie}" id="imie" placeholder="imie"></td>
+      <td th:if="${#fields.hasErrors('imie')}" th:errors="*{imie}">Błąd - imie</td>
+    </tr>
+    <tr>
+      <td><label for="nazw">Nazwisko</label></td>
+      <td><input type="text" th:field="*{nazw}" id="nazw" placeholder="nazwisko"></td>
+      <td th:if="${#fields.hasErrors('nazw')}" th:errors="*{nazw}">Błąd - nazwisko</td>
+    </tr>
+    <tr>
+      <td><label for="yob">Yob(rok urodzenia)</label></td>
+      <td><input type="text" th:field="*{yob}" id="yob" placeholder="rok urodzenia"></td>
+      <td th:if="${#fields.hasErrors('yob')}" th:errors="*{yob}">Błąd - yob(rok urodzenia)</td>
+    </tr>
+    <tr>
+      <td><input type="submit" value="Zmień 'zawodnik'"></td>
+    </tr>
+  </table>
+</form>
+
+</form>
+</body>
+</html>

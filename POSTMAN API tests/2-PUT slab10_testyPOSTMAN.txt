@@ -1,0 +1,67 @@
+////////////////
+//PUT - UPDATE//
+////////////////
+//1- glowa
+/api/glowa/1
+{
+	"srednia" : 33.3
+}
+
+//2- pilka
+/api/pilka/1
+{
+	"marka" : "InnaMarka"
+}
+
+//3- trener
+/api/trener/1
+{
+	"imie": "Adam",
+    "nazw": "Adamek"
+}
+
+{
+	"imie": "Bartosz",
+    "nazw": "Bartek",
+    "glowa" : {
+    	"srednica" : 25.5
+    }
+}
+
+{
+    "imie": "Cyryl",
+    "nazw": "Cierniak",
+    "glowa": {
+        "srednica": 48.1
+    },
+    "pilki": [
+        {
+            "marka": "Cierniakowa"
+        },
+        {
+            "marka": "Cierniaka"
+        }
+    ]
+}
+
+//4- zawodnik
+/api/zawodnik/1
+{
+	"imie" : "Daniel",
+    "nazw" : "Danielek",
+    "yob" : 1976
+}
+
+{
+    "imie" : "Eryk",
+    "nazw" : "Egoistyczny",
+    "yob" : 1989,
+    "pilki" : [
+   		{
+   			"marka" : "Erykowa"
+   		},
+   		{
+   			"marka" : "Eryczysta"
+   		}
+    ]
+}

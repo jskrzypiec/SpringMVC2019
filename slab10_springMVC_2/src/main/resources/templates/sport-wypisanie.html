@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Spring MVC App 2</title>
+</head>
+
+<body>
+<h1>App</h1>
+
+<table>
+  <tr>
+  
+    <td>
+	<div th:switch="${glowa_lista}">
+	  <h2 th:case="null">0 głów</h2>
+	  <div th:case="*">
+	    <h2>Głowy</h2>
+	    <table>
+	      <thead>
+	      <tr>
+	      	<th>Id</th>
+	        <th>Srednica</th>
+	      </tr>
+	      </thead>
+	      <tbody>
+	      <tr th:each="glowa : ${glowa_lista}">
+	      	<td th:text="${glowa.id}"></td>
+	        <td th:text="${glowa.srednica}"></td>
+	        <td><a th:href="@{/glowa/edit/{id}(id=${glowa.id})}">Edit</a></td>
+	        <td><a th:href="@{/glowa/delete/{id}(id=${glowa.id})}">Delete</a></td>
+	      </tr>
+	      </tbody>
+	    </table>
+	    <p><a href="/glowa/new">Dodaj 'głowa'</a></p>
+	  </div>
+	</div>
+    </td>
+
+    <td>
+	<div th:switch="${pilka_lista}">
+	  <h2 th:case="null">0 piłek</h2>
+	  <div th:case="*">
+	    <h2>Piłki</h2>
+	    <table>
+	      <thead>
+	      <tr>
+	      	<th>Id</th>
+	        <th>Marka</th>
+	      </tr>
+	      </thead>
+	      <tbody>
+	      <tr th:each="pilka : ${pilka_lista}">
+	      	<td th:text="${pilka.id}"></td>
+	        <td th:text="${pilka.marka}"></td>
+	        <td><a th:href="@{/pilka/edit/{id}(id=${pilka.id})}">Edit</a></td>
+	        <td><a th:href="@{/pilka/delete/{id}(id=${pilka.id})}">Delete</a></td>
+	      </tr>
+	      </tbody>
+	    </table>
+	    <p><a href="/pilka/new">Dodaj 'piłka'</a></p>
+	  </div>
+	</div>
+    </td>
+
+    <td>
+	<div th:switch="${trener_lista}">
+	  <h2 th:case="null">0 trenerów</h2>
+	  <div th:case="*">
+	    <h2>Trenerzy</h2>
+	    <table>
+	      <thead>
+	      <tr>
+	      	<th>Id</th>
+	        <th>Imie</th>
+	        <th>Nazw</th>
+	        <th>Głowa</th>
+	      </tr>
+	      </thead>
+	      <tbody>
+	      <tr th:each="trener : ${trener_lista}">
+	      	<td th:text="${trener.id}"></td>
+	        <td th:text="${trener.imie}"></td>
+	        <td th:text="${trener.nazw}"></td>
+	        <td th:text="${trener.glowa}"></td>
+	        <td><a th:href="@{/trener/edit/{id}(id=${trener.id})}">Edit</a></td>
+	        <td><a th:href="@{/trener/delete/{id}(id=${trener.id})}">Delete</a></td>
+	      </tr>
+	      </tbody>
+	    </table>
+	    <p><a href="/trener/new">Dodaj 'trener'</a></p>
+	  </div>
+	</div>
+    </td>
+
+    <td>
+	<div th:switch="${zawodnik_lista}">
+	  <h2 th:case="null">0 zawodników</h2>
+	  <div th:case="*">
+	    <h2>Zawodnicy</h2>
+	    <table>
+	      <thead>
+	      <tr>
+	      	<th>Id</th>
+	        <th>Imie</th>
+	        <th>Nazw</th>
+	        <th>Yob</th>
+	      </tr>
+	      </thead>
+	      <tbody>
+	      <tr th:each="zawodnik : ${zawodnik_lista}">
+	      	<td th:text="${zawodnik.id}"></td>
+	        <td th:text="${zawodnik.imie}"></td>
+	        <td th:text="${zawodnik.nazw}"></td>
+	        <td th:text="${zawodnik.yob}"></td>
+	        <td><a th:href="@{/zawodnik/edit/{id}(id=${zawodnik.id})}">Edit</a></td>
+	        <td><a th:href="@{/zawodnik/delete/{id}(id=${zawodnik.id})}">Delete</a></td>
+	      </tr>
+	      </tbody>
+	    </table>
+	    <p><a href="/zawodnik/new">Dodaj 'zawodnik'</a></p>
+	  </div>
+	</div>
+    </td>
+  </tr>
+  
+  <tr>
+  	<td></td>
+  	<td></td>
+  	
+  	<td>
+	<div th:switch="${pilki_trenerzy_lista}">
+	  <h2 th:case="null">0 (pilki - trenerzy)</h2>
+	  <div th:case="*">
+	    <h2>Piłki - Trenerzy</h2>
+	    <table>
+	      <thead>
+	      <tr>
+	      	<th>Trener_id</th>
+	        <th>Pilka_id</th>
+	      </tr>
+	      </thead>
+	      <tbody>
+	      <tr th:each="pilka : ${pilki_trenerzy_lista}">
+	        <td th:text="${pilka.trener.id}"></td>
+	        <td th:text="${pilka.id}"></td>
+	      </tr>
+	      </tbody>
+	    </table>
+	  </div>
+	</div>
+    </td>
+    
+    <td>
+	<div th:switch="${pilki_zawodnicy_lista}">
+	  <h2 th:case="null">0 (pilki - zawodnicy)</h2>
+	  <div th:case="*">
+	    <h2>Piłki - Zawodnicy</h2>
+	    <table>
+	      <thead>
+	      <tr>
+	      	<th>Pilka_id</th>
+	        <th>Zawodnicy_id</th>
+	      </tr>
+	      </thead>
+	      <tbody>
+	      <tr th:each="pilka : ${pilki_zawodnicy_lista}">
+	      	<td th:text="${pilka.id}"></td>
+	       	<td>
+	       		<span th:each="zawodnik : ${pilka.zawodnicy}">
+	       			<span th:text="${zawodnik.id}"></span> <span>, </span>
+	       		</span>
+	       	</td>	        
+	       	 	
+	      </tr>
+	      </tbody>
+	    </table>
+	  </div>
+	</div>
+    </td>
+  </tr>
+  
+  
+</table>
+
+</form>
+</body>

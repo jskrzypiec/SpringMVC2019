@@ -1,0 +1,63 @@
+//////////////
+//POST - add//
+//////////////
+//1- glowa
+{
+	"srednia" : 38.4
+}
+
+//2- pilka
+{
+	"marka" : "Adidas"
+}
+
+//3- trener
+{
+	"imie": "Adam",
+    "nazw": "Peczek"
+}
+
+{
+	"imie": "Tomasz",
+    "nazw": "Zielarczyk",
+    "glowa": {
+        "srednica": 34.7
+    }
+}
+
+{
+    "imie": "Stefan",
+    "nazw": "Hula",
+    "glowa": {
+        "srednica": 29.9
+    },
+    "pilki": [
+        {
+            "marka": "Kipsta"
+        },
+        {
+            "marka": "Nike"
+        }
+    ]
+}
+
+//4- zawodnik
+{
+	"imie" : "Aneta",
+    "nazw" : "Popko",
+    "yob" : 1988
+}
+
+{
+    "imie" : "Igor",
+    "nazw" : "Nowinka",
+    "yob" : 1995,
+    "pilki" : [
+   		{
+   			"marka" : "Pilkaczka"
+   		},
+   		{
+   			"marka" : "Kulczak"
+   		}
+    ]
+}
